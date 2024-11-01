@@ -12,4 +12,6 @@ def VC_Counter(s):
 
     return [vcount,ccount]
 
-print(type(VC_Counter("Hello World!")))
+print(VC_Counter("Hello World!"))
+print(VC_Counter("Python 123"))
+print(VC_Counter("sa    z"))

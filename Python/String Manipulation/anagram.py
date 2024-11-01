@@ -1,3 +1,5 @@
+from collections import Counter
+
 # Anagram Checker
 # Create a function that checks if two given strings are anagrams of each other.
 # An anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
@@ -25,14 +27,26 @@ def isAnagram02(s1,s2):
     s2= s1.lower().replace(" ","")  
     return sorted(s1)==sorted(s2)
 
+#Function 03: using collection counter 
+"""
+Counter Function
+it reuturns a dictionary with occurance as value for each element 
+"""
 
-print(isAnagram("Silent","listen")) #true
-print(isAnagram("The Morse Code","Here come dots")) #true
-print(isAnagram("The Morse Code","Here come do ts")) # true
-
-print(isAnagram02("Silent","listen")) #true
-print(isAnagram02("The Morse Code","Here come dots")) #true
-print(isAnagram02("The Morse Code","Here come do ts")) # true
+def isAnagram03(s1,s2):
+    s1=s1.lower().replace(" ","")
+    s2=s2.lower().replace(" ","")
+    return Counter(s1) == Counter(s2)
 
 
-print("".join (reversed("Hello I am")))
+# print(isAnagram("Silent","listen")) #true
+# print(isAnagram("The Morse Code","Here come dots")) #true
+# print(isAnagram("The Morse Code","Here come do ts")) # true
+
+# print(isAnagram02("Silent","listen")) #true
+# print(isAnagram02("The Morse Code","Here come dots")) #true
+# print(isAnagram02("The Morse Code","Here come do ts")) # true
+
+print(isAnagram03("Silent","listen")) #true
+print(isAnagram03("The Morse Code","Here come dots")) #true
+print(isAnagram03("The Morse Code","Here come do ts")) # trueprint(isAnagram3())
